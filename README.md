@@ -1,6 +1,6 @@
-**Article Text Extraction and NLP Analysis**
+# Article Text Extraction and NLP Analysis 
 
-### Project Description
+## Project Description
 This project involves extracting article text from URLs provided in an input Excel file, performing Natural Language Processing (NLP) analysis, and computing various textual metrics. The project uses Python libraries such as BeautifulSoup for web scraping and NLTK for text analysis. The output is saved in a structured format as specified in an output Excel file.
 
 ## Table of Contents
