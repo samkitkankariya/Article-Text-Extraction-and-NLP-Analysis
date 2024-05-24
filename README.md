@@ -1,15 +1,7 @@
-# Article-Text-Extraction-and-NLP-Analysis
-This project involves extracting article text from URLs provided in an input Excel file, performing Natural Language Processing (NLP) analysis, and computing various textual metrics.
+**Article Text Extraction and NLP Analysis**
 
 ### Project Description
 This project involves extracting article text from URLs provided in an input Excel file, performing Natural Language Processing (NLP) analysis, and computing various textual metrics. The project uses Python libraries such as BeautifulSoup for web scraping and NLTK for text analysis. The output is saved in a structured format as specified in an output Excel file.
-
-### README File
-
-# Article Text Extraction and NLP Analysis
-
-## Project Overview
-This project aims to extract textual data from a list of URLs provided in an input Excel file and perform comprehensive text analysis to compute various linguistic and readability metrics. The project leverages Python programming with libraries such as BeautifulSoup for web scraping and NLTK for text processing and analysis. The results are saved in an output Excel file in a specified structure.
 
 ## Table of Contents
 - [Objective](#objective)
@@ -17,10 +9,11 @@ This project aims to extract textual data from a list of URLs provided in an inp
 - [Data Analysis](#data-analysis)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Output Variables](#output-variables)
+- [Output Metrics Explained](#output-metrics-explained)
 - [Files](#files)
 - [Technical Skills Demonstrated](#technical-skills-demonstrated)
 - [Contributing](#contributing)
+- [License](#license)
 
 ## Objective
 The primary objective is to extract article texts from the given URLs, save the extracted articles in text files, and perform text analysis to compute several linguistic and readability metrics as outlined in the "Text Analysis.docx" document. The results are then saved in the specified format in the output Excel file.
@@ -28,6 +21,7 @@ The primary objective is to extract article texts from the given URLs, save the 
 ## Data Extraction
 ### Input
 - **Input.xlsx**: An Excel file containing the URLs of the articles to be scraped.
+
 ### Process
 - For each URL in the input file, extract the article title and text, excluding website headers, footers, and other extraneous content.
 - Save the extracted text in a text file named after the URL_ID.
@@ -71,45 +65,32 @@ To set up the project environment, follow these steps:
     ```
 
 ## Usage
-### Step 1: Data Extraction
-Run the script to extract article texts from the URLs provided in `Input.xlsx`:
+### Step 1: Data Extraction & Data Analysis
+Run the Colab Notebook  to extract article texts from the URLs provided in `Input.xlsx` and  perform text analysis and compute the required metrics:
 
-```sh
-python extract_articles.py
-```
-
-### Step 2: Data Analysis
-Run the script to perform text analysis and compute the required metrics:
-
-```sh
-python analyze_texts.py
-```
-
-### Step 3: Review Output
+### Step 2: Review Output
 The results will be saved in `Output Data Structure Self.xlsx`.
 
-## Output Variables
-- **URL_ID**
-- **URL**
-- **POSITIVE SCORE**
-- **NEGATIVE SCORE**
-- **POLARITY SCORE**
-- **SUBJECTIVITY SCORE**
-- **AVG SENTENCE LENGTH**
-- **PERCENTAGE OF COMPLEX WORDS**
-- **FOG INDEX**
-- **AVG NUMBER OF WORDS PER SENTENCE**
-- **COMPLEX WORD COUNT**
-- **WORD COUNT**
-- **SYLLABLE PER WORD**
-- **PERSONAL PRONOUNS**
-- **AVG WORD LENGTH**
+## Output Metrics Explained
+- **POSITIVE SCORE**: The count of positive words in the article based on a predefined list of positive words.
+- **NEGATIVE SCORE**: The count of negative words in the article based on a predefined list of negative words.
+- **POLARITY SCORE**: The ratio of the difference between positive and negative scores to the sum of positive and negative scores, indicating the overall sentiment of the text.
+- **SUBJECTIVITY SCORE**: The ratio of the sum of positive and negative scores to the total number of words, indicating the degree of subjectivity in the text.
+- **AVG SENTENCE LENGTH**: The average number of words per sentence in the article.
+- **PERCENTAGE OF COMPLEX WORDS**: The proportion of complex words (words with more than two syllables) to the total number of words.
+- **FOG INDEX**: A readability metric calculated using the formula: 0.4 * (average sentence length + percentage of complex words).
+- **AVG NUMBER OF WORDS PER SENTENCE**: Another measure of average sentence length in the article.
+- **COMPLEX WORD COUNT**: The total number of complex words in the article.
+- **WORD COUNT**: The total number of words in the article.
+- **SYLLABLE PER WORD**: The average number of syllables per word in the article.
+- **PERSONAL PRONOUNS**: The count of personal pronouns (e.g., I, we, my, ours, us) in the article.
+- **AVG WORD LENGTH**: The average length of words in the article.
 
 ## Files
 - **Input.xlsx**: Input file containing URLs.
 - **Output Data Structure.xlsx**: Template for the output data structure.
-- **extract_articles.py**: Script for extracting articles from the URLs.
-- **analyze_texts.py**: Script for performing text analysis.
+- **article_text_extraction.ipynb**: Jupyter Notebook for extracting articles from the URLs.
+- **text_analysis.ipynb**: Jupyter Notebook for performing text analysis.
 - **StopWords**: Directory containing stop words files.
 - **MasterDictionary**: Directory containing positive and negative word lists.
 
