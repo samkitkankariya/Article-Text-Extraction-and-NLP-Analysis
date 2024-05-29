@@ -1,4 +1,4 @@
-# Comprehensive NLP Analysis of Web Articles
+# Sentiment Analysis of Web Articles using NLP
 
 ## Project Description
 This project involves extracting article text from URLs provided in an input Excel file, performing Natural Language Processing (NLP) analysis, and computing various textual metrics. The project uses Python libraries such as BeautifulSoup for web scraping and NLTK for text analysis. The output is saved in a structured format as specified in an output Excel file.
